@@ -231,7 +231,7 @@ const App = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <img 
-                src="/public/AR-LOGO.jpg" 
+                src="/AR-LOGO.jpg" 
                 alt="Alex Ruiz Maker" 
                 className="h-12 w-auto"
               />
@@ -648,7 +648,7 @@ const App = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
               <img 
-                src="/public/Image2.jpg" 
+                src="/Image2.jpg" 
                 alt="Alex Ruiz Maker" 
                 className="h-16 w-auto"
               />
