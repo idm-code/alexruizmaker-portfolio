@@ -293,71 +293,33 @@ const App = () => {
       </nav>
 
       {/* Hero Section - Cinema Style */}
-      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video Simulation */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
-          <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
-        </div>
-
-        {/* Film Grain Effect */}
-        <div className={`absolute inset-0 opacity-20 bg-[url('data:image/svg+xml,%3Csvg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.4"/%3E%3C/svg%3E')] animate-pulse`} />
-
-        {/* Main Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          {/* Scene Indicator */}
-          <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-400/30">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              <span className="text-xs font-mono text-yellow-400">SCENE {String(currentScene + 1).padStart(2, '0')}</span>
-            </div>
-          </div>
-
-          {/* Dynamic Title */}
-          <div className="mb-8 h-32 flex items-center justify-center">
-            <h1 className="text-6xl md:text-8xl font-black tracking-wider">
-              <span className="inline-block bg-gradient-to-r from-yellow-400 via-green-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-                {scenes[currentScene].title}
-              </span>
-            </h1>
-          </div>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light tracking-wide">
-            {scenes[currentScene].subtitle}
-          </p>
-
-          {/* Control Panel */}
-          <div className="flex items-center justify-center space-x-6 mb-12">
-            <button 
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-green-400 text-black px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105"
-            >
-              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-              <span>{isPlaying ? currentContent.hero.pause : currentContent.hero.play}</span>
-            </button>
-            <button className="p-3 border border-yellow-400/30 rounded-full hover:bg-yellow-400/10 transition-colors">
-              <Volume2 size={20} />
-            </button>
-          </div>
-        </div>
-
-        {/* Scroll Indicator - Moved outside main content */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <button 
-            onClick={() => scrollToSection('about')}
-            className="flex flex-col items-center space-y-2 animate-bounce hover:text-green-400 transition-colors cursor-pointer group"
-          >
-            <span className="text-xs font-mono text-yellow-400 group-hover:text-green-400 transition-colors">{currentContent.hero.scrollExplore}</span>
-            <ChevronDown size={20} className="text-yellow-400 group-hover:text-green-400 transition-colors" />
-          </button>
-        </div>
-
-        {/* Timeline */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-800">
-          <div 
-            className="h-full bg-gradient-to-r from-yellow-400 to-green-400 transition-all duration-300"
-            style={{ width: `${((currentScene + 1) / scenes.length) * 100}%` }}
+      <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        {/* YouTube Video Fullscreen */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/yhFKo1BdTHA?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=yhFKo1BdTHA"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay; fullscreen; encrypted-media"
+            allowFullScreen
+            className="w-full h-full absolute inset-0"
+            style={{ pointerEvents: 'none' }}
           />
+          {/* Overlay para oscurecer el video si quieres */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-60 pointer-events-none" />
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="relative z-10 text-center w-full">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="flex flex-col items-center space-y-2 animate-bounce hover:text-green-400 transition-colors cursor-pointer group"
+            >
+              <span className="text-xs font-mono text-yellow-400 group-hover:text-green-400 transition-colors">{currentContent.hero.scrollExplore}</span>
+              <ChevronDown size={20} className="text-yellow-400 group-hover:text-green-400 transition-colors" />
+            </button>
+          </div>
         </div>
       </section>
 
