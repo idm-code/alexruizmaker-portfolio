@@ -293,7 +293,7 @@ const App = () => {
       </nav>
 
       {/* Hero Section - Cinema Style */}
-      <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative h-screen w-full overflow-hidden">
         {/* YouTube Video Fullscreen */}
         <div className="absolute inset-0 w-full h-full overflow-hidden">
           <iframe
@@ -305,21 +305,17 @@ const App = () => {
             className="w-full h-full absolute inset-0"
             style={{ pointerEvents: 'none' }}
           />
-          {/* Overlay para oscurecer el video si quieres */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-60 pointer-events-none" />
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="relative z-10 text-center w-full">
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="flex flex-col items-center space-y-2 animate-bounce hover:text-green-400 transition-colors cursor-pointer group"
-            >
-              <span className="text-xs font-mono text-yellow-400 group-hover:text-green-400 transition-colors">{currentContent.hero.scrollExplore}</span>
-              <ChevronDown size={20} className="text-yellow-400 group-hover:text-green-400 transition-colors" />
-            </button>
-          </div>
+        {/* Scroll Indicator - SIEMPRE ABAJO */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 text-center">
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="flex flex-col items-center space-y-2 animate-bounce hover:text-green-400 transition-colors cursor-pointer group"
+          >
+            <span className="text-xs font-mono text-yellow-400 group-hover:text-green-400 transition-colors">{currentContent.hero.scrollExplore}</span>
+            <ChevronDown size={20} className="text-yellow-400 group-hover:text-green-400 transition-colors" />
+          </button>
         </div>
       </section>
 
@@ -425,7 +421,7 @@ const App = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-yellow-400 to-green-400 opacity-60" />
                   
                   {/* Play Button */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
