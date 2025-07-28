@@ -529,29 +529,40 @@ const App = () => {
             <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-yellow-400/20">
               <h3 className="text-2xl font-bold mb-6">{currentContent.contact.startProject}</h3>
               
-              <form className="space-y-6">
+              <form
+                action="https://formsubmit.co/Alexruizmaker@gmail.com"
+                method="POST"
+                className="space-y-6"
+              >
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">{currentContent.contact.name}</label>
                     <input 
                       type="text" 
+                      name="name"
                       className="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors"
                       placeholder={currentContent.contact.namePlaceholder}
+                      required
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                     <input 
                       type="email" 
+                      name="email"
                       className="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors"
                       placeholder={currentContent.contact.emailPlaceholder}
+                      required
                     />
                   </div>
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">{currentContent.contact.projectType}</label>
-                  <select className="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors">
+                  <select
+                    name="projectType"
+                    className="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors"
+                    required
+                  >
                     <option>{currentContent.projects.musicVideo}</option>
                     <option>{currentContent.projects.commercial}</option>
                     <option>{currentContent.projects.interview}</option>
@@ -561,16 +572,19 @@ const App = () => {
                     <option>{language === 'es' ? 'Video Corporativo' : 'Corporate Video'}</option>
                   </select>
                 </div>
-                
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">{currentContent.contact.message}</label>
                   <textarea 
+                    name="message"
                     rows={4}
                     className="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors resize-none"
                     placeholder={currentContent.contact.projectPlaceholder}
+                    required
                   />
                 </div>
-                
+                <input type="hidden" name="_redirect" value="/" />
+                <input type="hidden" name="_next" value="https://alexruizmaker-portfolio.vercel.app/" />
+                <input type="hidden" name="_captcha" value="false" />
                 <button 
                   type="submit"
                   className="w-full bg-gradient-to-r from-yellow-400 to-green-400 text-black py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-[1.02]"
