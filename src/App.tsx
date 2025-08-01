@@ -99,7 +99,7 @@ const App = () => {
         directorsCut: "DIRECTOR'S CUT",
         behindLens: "BEHIND THE",
         lens: "LENS",
-        description1: "With over 4 years transforming ideas into visual narratives that captivate and connect. Specialized in advertising and product video production, specifically in the Perfumery and Cosmetics sector.",
+        description1: "With a long history transforming ideas into visual narratives that captivate and connect. Specialized in advertising and product video production, specifically in the Perfumery and Cosmetics sector.",
         description2: "My approach combines advanced technique with artistic sensitivity, creating content that not only looks incredible, but tells stories that resonate with the audience.",
         projects: "PROJECTS",
         years: "YEARS",
@@ -341,18 +341,46 @@ const App = () => {
           <p>{currentContent.about.description2}</p>
         </div>
       </div>
-      {/* Right Column - Foto autor */}
+      {/* Right Column - Foto autor con efecto bombilla parpadeante */}
       <div className="flex justify-center items-center">
         <div className="relative w-full h-[400px] max-w-md rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-400/30">
+          {/* Imagen en blanco y negro */}
           <img
             src="/behindcam3.jpg"
             alt="Alex Ruiz Maker detrás de la cámara"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover absolute inset-0 z-10"
           />
-          {/* Opcional: Overlay para efecto cinematográfico */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
+          {/* Imagen a color, animada */}
+          <img
+            src="/behindcam2.jpg"
+            alt="Alex Ruiz Maker detrás de la cámara color"
+            className="w-full h-full object-cover absolute inset-0 z-20"
+            style={{
+              opacity: 0,
+              animation: 'bombillaParpadeo 3s forwards'
+            }}
+          />
+          {/* Overlay opcional */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none z-30" />
         </div>
       </div>
+      <style>
+      {`
+      @keyframes bombillaParpadeo {
+        0%   { opacity: 0; filter: brightness(0.7) grayscale(1);}
+        10%  { opacity: 0.7; filter: brightness(1.2) grayscale(0.5);}
+        18%  { opacity: 0.2; filter: brightness(0.9) grayscale(0.8);}
+        25%  { opacity: 0.8; filter: brightness(1.3) grayscale(0.3);}
+        32%  { opacity: 0.1; filter: brightness(0.8) grayscale(0.9);}
+        40%  { opacity: 0.9; filter: brightness(1.4) grayscale(0.2);}
+        50%  { opacity: 0.3; filter: brightness(1.0) grayscale(0.7);}
+        60%  { opacity: 1;   filter: brightness(1.5) grayscale(0);}
+        80%  { opacity: 0.7; filter: brightness(1.2) grayscale(0.2);}
+        90%  { opacity: 1;   filter: brightness(1.5) grayscale(0);}
+        100% { opacity: 1;   filter: brightness(1.2) grayscale(0);}
+      }
+      `}
+      </style>
     </div>
   </div>
 </section>
