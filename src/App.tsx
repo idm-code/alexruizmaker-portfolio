@@ -30,7 +30,7 @@ const App = () => {
         directorsCut: "CORTE DEL DIRECTOR",
         behindLens: "DETRÁS DE",
         lens: "LA LENTE",
-        description1: "Con más de 4 años transformando ideas en narrativas visuales que cautivan y conectan. Especializado en la producción de videos publicitarios y de producto, concretamente en el sector de la Perfumería y Cosmética.",
+        description1: "Con una larga trayectoria transformando ideas en narrativas visuales que cautivan y conectan. Especializado en la producción de videos publicitarios y de producto, concretamente en el sector de la Perfumería y Cosmética.",
         description2: "Mi enfoque combina técnica avanzada con sensibilidad artística, creando contenido que no solo se ve increíble, sino que cuenta historias que resuenan con la audiencia.",
         projects: "PROYECTOS",
         years: "AÑOS",
@@ -158,11 +158,11 @@ const App = () => {
       title: "INDY OUD",
       category: currentContent.projects.documentary,
       year: "2024",
-      client: "PONSÀ",
+      client: "PONSÀ BARCELONA",
       thumbnail: "indyoud.jpg",
       instagramUrl: "https://www.instagram.com/reel/C-fObLwofUv/?igsh=ZGVkdWl3ZHgwMDZ4",
-      youtubeUrl: "https://www.youtube.com/watch?v=-tlWAwA3-1M&list=RD3R4Y8YQdWwM&index=9",
-      description: language === 'es' ? "[INSERTAR DESCRIPCION AQUI]" : "[INSERTAR DESCRIPCION AQUI]"
+      youtubeUrl: "https://www.youtube.com/watch?v=Xc2RZAGoh8M&list=PLGXEBsiUhPuPw9NW-_39KyX6rxbQDnfC5&index=5",
+      description: language === 'es' ? "Anuncio Comercial" : "Commercial Spot"
     },
     {
       id: 2,
@@ -340,23 +340,12 @@ const App = () => {
           <p className="text-lg">{currentContent.about.description1}</p>
           <p>{currentContent.about.description2}</p>
         </div>
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-8 mt-12">
-          <div className="text-center">
-            <div className="text-3xl font-black text-yellow-400 mb-2">30+</div>
-            <div className="text-sm text-gray-400 font-mono">{currentContent.about.projects}</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-black text-green-400 mb-2">4+</div>
-            <div className="text-sm text-gray-400 font-mono">{currentContent.about.years}</div>
-          </div>
-        </div>
       </div>
       {/* Right Column - Foto autor */}
       <div className="flex justify-center items-center">
         <div className="relative w-full h-[400px] max-w-md rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-400/30">
           <img
-            src="/behindcam.jpg"
+            src="/behindcam3.jpg"
             alt="Alex Ruiz Maker detrás de la cámara"
             className="w-full h-full object-cover"
           />
@@ -413,11 +402,6 @@ const App = () => {
 
                 {/* Project Info */}
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-yellow-400 font-mono text-xs tracking-wider">{project.category}</span>
-                    <span className="text-gray-400 font-mono text-xs">{project.year}</span>
-                  </div>
-                  
                   <h3 className="text-2xl font-black mb-2 group-hover:text-yellow-400 transition-colors">
                     {project.title}
                   </h3>
