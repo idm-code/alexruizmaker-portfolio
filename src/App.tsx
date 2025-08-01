@@ -155,12 +155,14 @@ const App = () => {
   const projects = [
     {
       id: 1,
-      title: "NEON DREAMS",
-      category: currentContent.projects.musicVideo,
+      title: "INDY OUD",
+      category: currentContent.projects.documentary,
       year: "2024",
-      client: "Universal Records",
-      thumbnail: "https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: language === 'es' ? "Estética cyberpunk con storytelling emocional" : "Cyberpunk aesthetic meets emotional storytelling"
+      client: "PONSÀ",
+      thumbnail: "public/indyoud.jpg",
+      instagramUrl: "https://www.instagram.com/reel/C-fObLwofUv/?igsh=ZGVkdWl3ZHgwMDZ4",
+      youtubeUrl: "https://www.youtube.com/watch?v=-tlWAwA3-1M&list=RD3R4Y8YQdWwM&index=9",
+      description: language === 'es' ? "[INSERTAR DESCRIPCION AQUI]" : "[INSERTAR DESCRIPCION AQUI]"
     },
     {
       id: 2,
@@ -320,80 +322,51 @@ const App = () => {
       </section>
 
       {/* About Section - Director's Cut */}
-      <section id="about" className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Left Column */}
-            <div>
-              <div className="mb-8">
-                <span className="text-yellow-400 font-mono text-sm tracking-wider">{currentContent.about.directorsCut}</span>
-                <h2 className="text-4xl md:text-6xl font-black mt-2 mb-6">
-                  {currentContent.about.behindLens}
-                  <span className="block bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text text-transparent">
-                    {currentContent.about.lens}
-                  </span>
-                </h2>
-              </div>
-
-              <div className="space-y-6 text-gray-300 leading-relaxed">
-                <p className="text-lg">
-                  {currentContent.about.description1}
-                </p>
-                <p>
-                  {currentContent.about.description2}
-                </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 mt-12">
-                <div className="text-center">
-                  <div className="text-3xl font-black text-yellow-400 mb-2">30+</div>
-                  <div className="text-sm text-gray-400 font-mono">{currentContent.about.projects}</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-black text-green-400 mb-2">4+</div>
-                  <div className="text-sm text-gray-400 font-mono">{currentContent.about.years}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="relative">
-              <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-yellow-400/20">
-                <div className="absolute top-4 left-4 flex space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full" />
-                  <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                  <div className="w-3 h-3 bg-green-400 rounded-full" />
-                </div>
-
-                <div className="mt-8 space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <Camera className="text-yellow-400" size={24} />
-                    <div>
-                      <div className="font-semibold">{currentContent.about.cinematography}</div>
-                      <div className="text-sm text-gray-400">{currentContent.about.cinematographyDesc}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Film className="text-green-400" size={24} />
-                    <div>
-                      <div className="font-semibold">{currentContent.about.postProduction}</div>
-                      <div className="text-sm text-gray-400">{currentContent.about.postProductionDesc}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <Award className="text-yellow-400" size={24} />
-                    <div>
-                      <div className="font-semibold">{currentContent.about.storytelling}</div>
-                      <div className="text-sm text-gray-400">{currentContent.about.storytellingDesc}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<section id="about" className="py-20 relative">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Left Column - Texto */}
+      <div>
+        <div className="mb-8">
+          <span className="text-yellow-400 font-mono text-sm tracking-wider">{currentContent.about.directorsCut}</span>
+          <h2 className="text-4xl md:text-6xl font-black mt-2 mb-6">
+            {currentContent.about.behindLens}
+            <span className="block bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text text-transparent">
+              {currentContent.about.lens}
+            </span>
+          </h2>
+        </div>
+        <div className="space-y-6 text-gray-300 leading-relaxed">
+          <p className="text-lg">{currentContent.about.description1}</p>
+          <p>{currentContent.about.description2}</p>
+        </div>
+        {/* Stats */}
+        <div className="grid grid-cols-3 gap-8 mt-12">
+          <div className="text-center">
+            <div className="text-3xl font-black text-yellow-400 mb-2">30+</div>
+            <div className="text-sm text-gray-400 font-mono">{currentContent.about.projects}</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-black text-green-400 mb-2">4+</div>
+            <div className="text-sm text-gray-400 font-mono">{currentContent.about.years}</div>
           </div>
         </div>
-      </section>
+      </div>
+      {/* Right Column - Foto autor */}
+      <div className="flex justify-center items-center">
+        <div className="relative w-full h-[400px] max-w-md rounded-2xl overflow-hidden shadow-lg border-4 border-yellow-400/30">
+          <img
+            src="/behindcam.jpg"
+            alt="Alex Ruiz Maker detrás de la cámara"
+            className="w-full h-full object-cover"
+          />
+          {/* Opcional: Overlay para efecto cinematográfico */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Projects Section - Film Strip */}
       <section id="projects" className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -421,15 +394,18 @@ const App = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-yellow-400 to-green-400 opacity-60" />
-                  
-                  {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Play Button grande (hover) */}
+                  <a
+                    href={project.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    title="Ver en YouTube"
+                  >
                     <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-green-400 rounded-full flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300">
                       <Play size={24} className="text-black ml-1" />
                     </div>
-                  </div>
-
+                  </a>
                   {/* Film Strip Effect */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-yellow-400 to-green-400" />
                   <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-yellow-400" />
@@ -449,11 +425,31 @@ const App = () => {
                   <p className="text-gray-400 text-sm mb-3">{project.description}</p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-green-400 font-semibold text-sm">{project.client}</span>
-                    <div className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-400 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Play size={12} className="text-black ml-0.5" />
+                      <span className="text-green-400 font-semibold text-sm">{project.client}</span>
+                      <div className="flex items-center space-x-2">
+                        {project.instagramUrl && (
+                          <a
+                            href={project.instagramUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                            title="Ver en Instagram"
+                          >
+                            <Instagram size={16} className="text-black" />
+                          </a>
+                        )}
+                        {/* Play Button pequeño */}
+                        <a
+                          href={project.youtubeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
+                          title="Ver en YouTube"
+                        >
+                          <Play size={12} className="text-black ml-0.5" />
+                        </a>
+                      </div>
                     </div>
-                  </div>
                 </div>
               </div>
             ))}
