@@ -159,7 +159,7 @@ const App = () => {
       category: currentContent.projects.documentary,
       year: "2024",
       client: "PONSÀ",
-      thumbnail: "public/indyoud.jpg",
+      thumbnail: "indyoud.jpg",
       instagramUrl: "https://www.instagram.com/reel/C-fObLwofUv/?igsh=ZGVkdWl3ZHgwMDZ4",
       youtubeUrl: "https://www.youtube.com/watch?v=-tlWAwA3-1M&list=RD3R4Y8YQdWwM&index=9",
       description: language === 'es' ? "[INSERTAR DESCRIPCION AQUI]" : "[INSERTAR DESCRIPCION AQUI]"
