@@ -46,7 +46,7 @@ const App = () => {
         selectedWorks: "TRABAJOS SELECCIONADOS",
         portfolio: "PORTFOLIO",
         reel: "REEL",
-        viewFullReel: "VER REEL COMPLETO",
+        viewFullReel: "TODOS MIS TRABAJOS AQUI",
         musicVideo: "Musical",
         documentary: "Producto",
         commercial: "Eventos",
@@ -115,7 +115,7 @@ const App = () => {
         selectedWorks: "SELECTED WORKS",
         portfolio: "PORTFOLIO",
         reel: "REEL",
-        viewFullReel: "VIEW FULL REEL",
+        viewFullReel: "ALL MY WORKS HERE",
         musicVideo: "Music Video",
         documentary: "Product",
         commercial: "Events",
@@ -475,10 +475,15 @@ const App = () => {
 
           {/* View More */}
           <div className="text-center mt-12">
-            <button className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105">
+            <a
+              href="https://youtube.com/playlist?list=PLGXEBsiUhPuPw9NW-_39KyX6rxbQDnfC5&feature=shared"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-yellow-400 to-green-400 text-black px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105"
+            >
               <span>{currentContent.projects.viewFullReel}</span>
               <Play size={16} />
-            </button>
+            </a>
           </div>
         </div>
       </section>
