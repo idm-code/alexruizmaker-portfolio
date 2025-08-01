@@ -166,30 +166,36 @@ const App = () => {
     },
     {
       id: 2,
-      title: "URBAN LEGENDS",
+      title: "KABIRI",
       category: currentContent.projects.documentary,
       year: "2024",
-      client: "Netflix",
-      thumbnail: "https://images.pexels.com/photos/3945313/pexels-photo-3945313.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: language === 'es' ? "Serie documental sobre cultura urbana" : "Street culture documentary series"
+      client: "BASSAREI",
+      thumbnail: "kabiri.jpg",
+      instagramUrl: "https://www.instagram.com/reel/DEzZTI2sTdd/?igsh=c2I2dGRzbXVlamM3",
+      youtubeUrl: "https://www.instagram.com/reel/DEzZTI2sTdd/?igsh=c2I2dGRzbXVlamM3",
+      description: language === 'es' ? "Anuncio Comercial (SOLO EN INSTAGRAM)" : "Commercial Spot (INSTAGRAM ONLY)"
     },
     {
       id: 3,
-      title: "MIDNIGHT CHASE",
+      title: "GAEA",
       category: currentContent.projects.commercial,
       year: "2023",
-      client: "BMW",
-      thumbnail: "https://images.pexels.com/photos/2526105/pexels-photo-2526105.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: language === 'es' ? "Comercial automotriz de alta velocidad" : "High-octane automotive commercial"
+      client: "CENTAURI PERFUMES",
+      thumbnail: "gaea.jpg",
+      instagramUrl: "https://www.instagram.com/reel/C7g93qfgR0T/?igsh=MTNmbW82a3ZhZm91Zw==",
+      youtubeUrl: "https://youtu.be/uUsi-X2LZKo?si=8IcG-XT897tqschp",
+      description: language === 'es' ? "Anuncio Comercial" : "Commercial Spot",
     },
     {
       id: 4,
-      title: "ETHEREAL",
+      title: "ODDYSEY",
       category: currentContent.projects.shortFilm,
       year: "2023",
-      client: "Independent",
-      thumbnail: "https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg?auto=compress&cs=tinysrgb&w=800",
-      description: language === 'es' ? "Narrativa experimental premiada" : "Award-winning experimental narrative"
+      client: "PONSÀ BARCELONA",
+      thumbnail: "oddysey.jpg",
+      instagramUrl: "https://www.instagram.com/reel/C_JO3AROJSM/?igsh=Mzk0eG91Zmk1bHlo",
+      youtubeUrl: "https://www.youtube.com/watch?v=s5iE1ohTAwU&list=PLGXEBsiUhPuPw9NW-_39KyX6rxbQDnfC5&index=6",
+      description: language === 'es' ? "Anuncio Comercial" : "Commercial Spot",
     }
   ];
 
