@@ -172,8 +172,7 @@ const App = () => {
       client: "BASSAREI",
       thumbnail: "kabiri.jpg",
       instagramUrl: "https://www.instagram.com/reel/DEzZTI2sTdd/?igsh=c2I2dGRzbXVlamM3",
-      youtubeUrl: "https://www.instagram.com/reel/DEzZTI2sTdd/?igsh=c2I2dGRzbXVlamM3",
-      description: language === 'es' ? "Anuncio Comercial (SOLO EN INSTAGRAM)" : "Commercial Spot (INSTAGRAM ONLY)"
+      description: language === 'es' ? "Anuncio Comercial" : "Commercial Spot"
     },
     {
       id: 3,
@@ -456,16 +455,6 @@ const App = () => {
                             <Instagram size={16} className="text-black" />
                           </a>
                         )}
-                        {/* Play Button pequeño */}
-                        <a
-                          href={project.youtubeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-8 h-8 bg-gradient-to-r from-yellow-400 to-green-400 rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                          title="Ver en YouTube"
-                        >
-                          <Play size={12} className="text-black ml-0.5" />
-                        </a>
                       </div>
                     </div>
                 </div>
